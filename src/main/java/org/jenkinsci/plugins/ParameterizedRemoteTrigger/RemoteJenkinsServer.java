@@ -1,6 +1,6 @@
 package org.jenkinsci.plugins.ParameterizedRemoteTrigger;
 
-import static org.apache.commons.lang.StringUtils.trimToEmpty;
+import static org.apache.commons.lang3.StringUtils.trimToEmpty;
 
 import java.io.Serializable;
 import javax.net.ssl.*;

@@ -1,7 +1,7 @@
 package org.jenkinsci.plugins.ParameterizedRemoteTrigger.utils;
 
-import static org.apache.commons.lang.StringUtils.isEmpty;
-import static org.apache.commons.lang.StringUtils.trimToNull;
+import static org.apache.commons.lang3.StringUtils.isEmpty;
+import static org.apache.commons.lang3.StringUtils.trimToNull;
 
 import java.net.MalformedURLException;
 import java.net.URL;

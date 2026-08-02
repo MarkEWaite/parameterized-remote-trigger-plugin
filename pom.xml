@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.jenkins-ci.plugins</groupId>
 		<artifactId>plugin</artifactId>
-		<version>5.28</version>
+		<version>6.2211.v27f680c93c53</version>
 		<relativePath />
 	</parent>
 
@@ -17,6 +17,7 @@
 		<gitHubRepo>jenkinsci/parameterized-remote-trigger-plugin</gitHubRepo>
 		<!-- https://wiki.jenkins-ci.org/display/JENKINS/Marking+a+new+plugin+version+as+incompatible+with+older+versions -->
 		<hpi.compatibleSinceVersion>3.1.6</hpi.compatibleSinceVersion>
+		<ban-commons-lang-2.skip>false</ban-commons-lang-2.skip>
 	</properties>
 
 	<artifactId>Parameterized-Remote-Trigger</artifactId>
@@ -87,6 +88,10 @@
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		<dependency>
+			<groupId>io.jenkins.plugins</groupId>
+			<artifactId>commons-lang3-api</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.jenkins-ci.plugins</groupId>
 			<artifactId>credentials</artifactId>
