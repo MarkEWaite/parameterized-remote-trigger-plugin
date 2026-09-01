@@ -2,9 +2,9 @@ package org.jenkinsci.plugins.ParameterizedRemoteTrigger;
 
 import static java.lang.Math.min;
 import static java.util.Collections.singletonMap;
-import static org.apache.commons.lang.StringUtils.isEmpty;
-import static org.apache.commons.lang.StringUtils.trimToEmpty;
-import static org.apache.commons.lang.StringUtils.trimToNull;
+import static org.apache.commons.lang3.StringUtils.isEmpty;
+import static org.apache.commons.lang3.StringUtils.trimToEmpty;
+import static org.apache.commons.lang3.StringUtils.trimToNull;
 import static org.jenkinsci.plugins.ParameterizedRemoteTrigger.utils.StringTools.NL;
 
 import edu.umd.cs.findbugs.annotations.NonNull;
@@ -30,7 +30,7 @@ import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.apache.commons.lang.exception.ExceptionUtils;
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.jenkinsci.plugins.ParameterizedRemoteTrigger.auth2.Auth2;
 import org.jenkinsci.plugins.ParameterizedRemoteTrigger.auth2.Auth2.Auth2Descriptor;
 import org.jenkinsci.plugins.ParameterizedRemoteTrigger.auth2.NullAuth;
@@ -502,7 +502,7 @@ public class RemoteBuildConfiguration extends Builder implements SimpleBuildStep
 				e.getClass().getSimpleName(), e.getMessage(),
 				this.getShouldNotFailBuild() ? " But the build will continue." : ""));
 		if (enhancedLogging) {
-			msg.append(NL).append(ExceptionUtils.getFullStackTrace(e));
+			msg.append(NL).append(ExceptionUtils.getStackTrace(e));
 		}
 		if (logger != null)
 			logger.println("ERROR: " + msg.toString());

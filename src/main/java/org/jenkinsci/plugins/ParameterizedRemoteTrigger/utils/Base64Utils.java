@@ -1,6 +1,6 @@
 package org.jenkinsci.plugins.ParameterizedRemoteTrigger.utils;
 
-import static org.apache.commons.lang.StringUtils.isEmpty;
+import static org.apache.commons.lang3.StringUtils.isEmpty;
 
 import java.io.IOException;
 
